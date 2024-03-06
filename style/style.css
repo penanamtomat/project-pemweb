@@ -1,0 +1,43 @@
+.tentang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 85px 0px 80px;
+}
+
+.tengah {
+  width: 650px;
+  padding: 10px;
+}
+
+/* h2.t-tengah {
+  text-align: center;
+} */
+/* 
+.t-tengah {
+  text-align: justify;
+  text-align: center;
+} */
+
+/* @media (max-width: 750px) {
+  .tengah {
+    width: 400px;
+    padding: 5px;
+  }
+  .t-tengah {
+    text-align: center;
+    font-size: small;
+  }
+} */
+
+/* img.card {
+  width: 500px;
+  height: 450px;
+  object-fit: cover;
+} */
+
+/* .baru{
+ background-color: #f0f4f6; 
+} */
+
+

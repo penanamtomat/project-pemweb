@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TPQ Al-Baidhowi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top"
+      style="background-color: #228b22"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#tentang">
+          <img
+            src="../img/logo.jpg"
+            alt="Logo"
+            width="50"
+            height="45"
+            class="d-inline-block align-text-center"
+            style="border-radius: 50%; object-fit: fit"
+          />
+          Yayasan Taajul Huffazh Al-Baidhowi
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#carouselExampleIndicators"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pendaftaran">Daftar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/antrian">Antrian</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Login
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Admin</a></li>
+                <li><a class="dropdown-item" href="#">Guru</a></li>
+                <li><a class="dropdown-item" href="#">Santri</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Bantuan</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      style="margin-top: 48px"
+    >
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img
+              src="../img/jumbotron1.jpg"
+              class="d-block w-100"
+              alt="Foto Wisuda Santri"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="../img/jumbotron2.jpg"
+              class="d-block w-100"
+              alt="Foto Wisuda Santri"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="../img/jumbotron3.jpg"
+              class="d-block w-100"
+              alt="Foto Wisuda Santri"
+            />
+          </div>
+        </div>
+        <!-- <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+      </div>
+    </div>
+
+    <!-- TENTANG TPQ -->
+
+    <div class="tentang" id="tentang">
+      <div class="card text-center" style="width: 650px; border: none">
+        <h2 class="text-center">Tentang TPQ Al-Baidhowi</h2>
+        <p class="text-center">
+          Yayasan Taajul Huffazh Al-Baidhowi (dahulu bernama TPQ Al-Baidhowi)
+          didirikan pada Maret 2008 dan saat ini sudah berusia lebih dari 15
+          tahun. Awalnya TPQ hanya dilakukan di ruang tamu dengan jumlah santri
+          yang sedikit, namun seiring bertambahnya jumlah santri, TPQ Al
+          Baidhowi mulai berkembang dan ada pembangunan asrama serta Yayasan
+          Taajul Huffazh Al Baidhowi yang menaungi TPQ, rumah tahfizh, dan
+          majelis ta'lim. Mulai tahun 2013, TPQ Al Baidhowi mulai meminta biaya
+          untuk mengikuti kegiatan belajar karena semakin banyak santri dan
+          membutuhkan lebih banyak guru serta mulai menerima program Iqra'.
+        </p>
+      </div>
+    </div>
+
+    <!-- PROGRAM TPQ -->
+
+    <div class="container" style="margin-bottom: 80px">
+      <div class="row text-center mt-3">
+        <div class="col">
+          <h2 style="padding-bottom: 20px">Program TPQ</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div
+          class="col-md-4 mt-3"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Tahfidz Qur'an</h5>
+              <p class="card-text">
+                Merupakan program menghafal Al-Qur'an. Santri akan disimak dan
+                menghafal Al-Qur'an oleh guru Tahfidzul Qur'an. Kami juga
+                menerima Asrama / Rumah Tahfidz khusus program dengan
+              </p>
+              <a href="#" class="card-link">Selengkapnya tentang program</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4 mt-3"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Tahsin Al-Qur'an</h5>
+              <p class="card-text">
+                Merupakan program membaca Al-Qur'an dengan menerapkan bacaan
+                sesuai kaidah Tajwid dan Makhorijul Huruf yang tepat. Santri
+                akan disimak sekaligus mempelajari ilmu-ilmu Tajwid dasar
+              </p>
+              <a href="#" class="card-link">Selengkapnya tentang program</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4 mt-3"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Iqra'</h5>
+              <p class="card-text">
+                Merupakan program membaca Iqra' khusus untuk santri sore. Santri
+                akan disimak dan diajarkan menyebut huruf-huruf Hijaiyah sesuai
+                dengan kaidah bacaan Makhorijul Huruf
+              </p>
+              <a href="#" class="card-link">Selengkapnya tentang program</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALERI -->
+
+    <div class="container" style="margin-bottom: 80px">
+      <div class="row text-center mt-3">
+        <div class="col">
+          <h2 style="padding-bottom: 20px">Galeri TPQ</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div
+          class="col-md-4 mt-3"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card" style="width: 28rem">
+            <div class="card-body">
+              <img
+                src="../img/poto4.jpg"
+                class="card-img-top img-fluid santri"
+                alt="Foto Santri"
+                title="Foto Santri"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4 mt-3"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card" style="width: 28rem">
+            <div class="card-body">
+              <img
+                src="../img/poto2.jpg"
+                class="card-img-top img-fluid"
+                alt="Foto Santri"
+                title="Foto Santri"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-4 mt-3"
+          style="display: flex; justify-content: center"
+        >
+          <div class="card" style="width: 28rem">
+            <div class="card-body">
+              <img
+                src="../img/poto3.jpg"
+                class="card-img-top img-fluid"
+                alt="Foto Santri"
+                title="Foto Santri"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFORMASI -->
+
+    <div style="border-top: 3px solid #ddd">
+      <div class="container" style="margin-bottom: 80px">
+        <div class="row" style="display: flex; justify-content: left">
+          <div
+            class="col-md-4 mt-3"
+            style="display: flex; justify-content: center"
+          >
+            <div class="card" style="width: 18rem; border: none">
+              <div class="card-body">
+                <h2 class="card-title" style="padding-bottom: 20px">
+                  Informasi
+                </h2>
+                <p class="card-text">
+                  Untuk informasi lebih lanjut, klik link berikut:
+                </p>
+                <ul>
+                  <li><a href="#" class="card-link">Antrian</a></li>
+                  <li><a href="#" class="card-link">Daftar</a></li>
+                  <li><a href="#" class="card-link">Santri</a></li>
+                  <li><a href="#" class="card-link">Bantuan</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row text-left"> -->
+          <div
+            class="col-md-4 mt-3"
+            style="display: flex; justify-content: center"
+          >
+            <div class="card" style="width: 18rem; border: none">
+              <div class="card-body">
+                <h2 class="card-title" style="padding-bottom: 20px">
+                  Santri saat ini
+                </h2>
+                <table
+                  class="table table-bordered text-center"
+                >
+                  <thead>
+                    <tr>
+                      <td><strong>Sore</strong></td>
+                      <td><strong>Malam</strong></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>131</td>
+                      <td>194</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><strong>Total</strong></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">325</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 mt-3"
+            style="display: flex; justify-content: center"
+          >
+            <div class="card" style="width: 18rem; border: none">
+              <div class="card-body">
+                <h2 class="card-title" style="padding-bottom: 20px">
+                  Pengumuman
+                </h2>
+                <p class="card-text">
+                  Presensi Guru dapat dilakukan secara online melalui laman
+                  <a href="#">Dashboard</a>. Presensi Santri dilakukan secara
+                  offline/secara langsung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="baru" style="background-color: #f0f4f6">
+      <div class="container" style="border-top: 1px solid #ddd">
+        <div class="row" style="display: flex; justify-content: left">
+          <div
+            class="col-md-4 mt-4"
+            style="display: flex; justify-content: center"
+          >
+            <div
+              class="card"
+              style="width: 18rem; border: none; background-color: #f0f4f6"
+            >
+              <div class="card-body">
+                <a class="navbar-brand" href="#tentang">
+                  <img
+                    src="../img/logo.jpg"
+                    alt="Logo"
+                    width="50"
+                    height="45"
+                    class="d-inline-block align-text-center"
+                    style="border-radius: 50%; object-fit: fit"
+                  />
+                  <strong>Yayasan Taajul Huffazh Al-Baidhowi</strong>
+                </a>
+                <p class="card-text">
+                  Jl. Dr. Soetomo, Kel. Karang Baru, <br />
+                  Kec. Selaparang, Kota Mataram <br />
+                  NTB 83123
+                </p>
+                <a href="#" class="card-link"
+                  ><img src="../img/ig.jpg" alt="logo ig"
+                /></a>
+                <a href="#" class="card-link"
+                  ><img src="../img/th.jpg" alt="logo wa"
+                /></a>
+                <a href="#" class="card-link"
+                  ><img src="../img/gmail.jpeg" alt="logo gmail"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
