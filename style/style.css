@@ -1,14 +1,4 @@
-.tentang {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 85px 0px 80px;
-}
 
-.tengah {
-  width: 650px;
-  padding: 10px;
-}
 
 /* h2.t-tengah {
   text-align: center;
