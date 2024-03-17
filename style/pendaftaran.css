@@ -1,0 +1,57 @@
+body p,
+a,
+li,
+.text-size {
+  font-size: 20px;
+}
+
+.navbar-new {
+  background-color: #228b22;
+  padding: 16px 0;
+}
+
+.formu {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+
+.warn {
+  padding-top: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.border-top {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pad-bottom {
+  padding: 20px;
+}
+
+.pad-text {
+  padding: 10px 0;
+}
+
+.btn {
+  background-color: #228b22;
+  color: white;
+  width: 100px;
+}
+
+.btn:hover {
+  background-color: #228b22;
+  color: #ddd;
+}
+
+.width-sel {
+  width: 275px;
+}

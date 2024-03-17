@@ -18,82 +18,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" href="../img/icon.png" type="image/x-icon"/>
+    <script src="../script/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <style>
-      .tentang {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 85px 0px 80px;
-      }
-
-      .tengah {
-        width: 650px;
-        padding: 10px;
-      }
-
-      .footer {
-        margin: 20px 0px 20px;
-      }
-
-      .tabel {
-        border-collapse: collapse;
-        width: 100%;
-        table-layout: fixed;
-      }
-
-      .pad-left {
-        padding-left: 10px;
-      }
-
-      .ijo {
-        display: flex;
-        justify-content: flex-start;
-        padding: 0px 5px;
-        color: #228b22;
-      }
-
-      .ijo:hover,
-      .ijo-link:hover {
-        color: #7fbc94;
-      }
-
-      .putih:hover {
-        color: white;
-      }
-
-      a {
-        text-decoration: none;
-        color: #228b22;
-      }
-
-      .ijo a i {
-        font-size: 20px;
-      }
-
-      .copyright {
-        background-color: #868e89;
-        padding: 15px 0px 1px;
-        text-align: center;
-      }
-
-      .design {
-        opacity: 0.7;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin: 0px 5px;
-      }
-    </style>
   </head>
   <body>
     <!-- NAVBAR -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top"
-      style="background-color: #228b22"
+      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top navbar-new"
     >
       <div class="container">
         <a class="navbar-brand" href="#tentang">
@@ -102,8 +38,7 @@
             alt="Logo"
             width="50"
             height="45"
-            class="d-inline-block align-text-center"
-            style="border-radius: 50%; object-fit: fit"
+            class="d-inline-block align-text-center img-new"
           />
           Yayasan Taajul Huffazh Al-Baidhowi
         </a>
@@ -122,21 +57,21 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link active text-size"
                 aria-current="page"
                 href="#carouselExampleIndicators"
                 >Beranda</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link putih" href="/pendaftaran">Daftar</a>
+              <a class="nav-link putih text-size" href="pendaftaran.html" id="popupReg">Daftar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link putih" href="/antrian">Antrian</a>
+              <a class="nav-link putih text-size" href="/antrian">Antrian</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle putih"
+                class="nav-link dropdown-toggle putih text-size"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -145,11 +80,11 @@
                 Login
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Admin</a></li>
-                <li><a class="dropdown-item" href="#">Guru</a></li>
-                <li><a class="dropdown-item" href="#">Santri</a></li>
+                <li><a class="dropdown-item text-size hov" href="#">Admin</a></li>
+                <li><a class="dropdown-item text-size hov" href="#">Guru</a></li>
+                <li><a class="dropdown-item text-size hov" href="#">Santri</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Bantuan</a></li>
+                <li><a class="dropdown-item text-size hov" href="#">Bantuan</a></li>
               </ul>
             </li>
           </ul>
@@ -157,12 +92,37 @@
       </div>
     </nav>
 
+    <!-- POP UP PERSYARATAN -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup">
+      <h3>Persyaratan</h3>
+      <ul>
+          <li>Pastikan Anda mengisi data diri dengan benar</li>
+          <li>Jika ada kesalahan data, silahkan hubungi admin</li>
+          <li>Pastikan Anda memasukkan data diri yang belum pernah didaftarkan sebelumnya</li>
+          <li>Jika Anda memaksa untuk melakukan pendaftaran lagi, maka data yang sebelumnya akan secara otomatis di hapus oleh sistem</li>
+      </ul>
+      <div class="cek">
+          <label for="agreeCheckbox">
+              <input type="checkbox" id="agreeCheckbox"> Saya menyetujui persyaratan di atas.
+          </label>
+      </div>
+
+      <div class="bttn-container">
+          <div class="bttn hidden" id="continueToReg" >
+              <a href="pendaftaran.html">Lanjutkan</a>
+          </div>
+
+          <button class="popupx" id="closePopupBttn">batal</button>
+      </div>
+  </div>
+</div>
+
     <!-- JUMBOTRON -->
     <div
-      id="carouselExampleAutoplaying"
+      id="carouselExampleAutoplaying div-jumbotron-new"
       class="carousel slide"
       data-bs-ride="carousel"
-      style="margin-top: 48px"
     >
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -211,31 +171,13 @@
             />
           </div>
         </div>
-        <!-- <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> -->
       </div>
     </div>
 
     <!-- TENTANG TPQ -->
 
     <div class="tentang" id="tentang">
-      <div class="card text-center" style="width: 650px; border: none">
+      <div class="card text-center div-card-new">
         <h2 class="text-center">Tentang TPQ Al-Baidhowi</h2>
         <p class="text-center">
           Yayasan Taajul Huffazh Al-Baidhowi (dahulu bernama TPQ Al-Baidhowi)
@@ -251,22 +193,25 @@
       </div>
     </div>
 
+    <div>
+
+    </div>
+
     <!-- PROGRAM TPQ -->
 
-    <div class="container" style="margin-bottom: 80px">
+    <div class="container div-margin-bottom">
       <div class="row text-center mt-3">
         <div class="col">
-          <h2 style="padding-bottom: 20px">Program TPQ</h2>
+          <h2 class="padding-bottom">Program TPQ</h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div
-          class="col-md-4 mt-3"
-          style="display: flex; justify-content: center"
+          class="col-md-4 mt-3 div-card-program"
         >
-          <div class="card" style="width: 18rem">
+          <div class="card card-width">
             <div class="card-body">
-              <h5 class="card-title">Tahfidz Qur'an</h5>
+              <h4 class="card-title">Tahfidz Qur'an</h4>
               <p class="card-text">
                 Merupakan program menghafal Al-Qur'an. Santri akan disimak dan
                 menghafal Al-Qur'an oleh guru Tahfidzul Qur'an. Kami juga
@@ -279,12 +224,11 @@
           </div>
         </div>
         <div
-          class="col-md-4 mt-3"
-          style="display: flex; justify-content: center"
+          class="col-md-4 mt-3 div-card-program"
         >
-          <div class="card" style="width: 18rem">
+          <div class="card card-width">
             <div class="card-body">
-              <h5 class="card-title">Tahsin Al-Qur'an</h5>
+              <h4 class="card-title">Tahsin Al-Qur'an</h4>
               <p class="card-text">
                 Merupakan program membaca Al-Qur'an dengan menerapkan bacaan
                 sesuai kaidah Tajwid dan Makhorijul Huruf yang tepat. Santri
@@ -297,12 +241,11 @@
           </div>
         </div>
         <div
-          class="col-md-4 mt-3"
-          style="display: flex; justify-content: center"
+          class="col-md-4 mt-3 div-card-program"
         >
-          <div class="card" style="width: 18rem">
+          <div class="card card-width">
             <div class="card-body">
-              <h5 class="card-title">Iqra'</h5>
+              <h4 class="card-title">Iqra'</h4>
               <p class="card-text">
                 Merupakan program membaca Iqra' khusus untuk santri sore. Santri
                 akan disimak dan diajarkan menyebut huruf-huruf Hijaiyah dalam
@@ -319,18 +262,17 @@
 
     <!-- GALERI -->
 
-    <div class="container" style="margin-bottom: 80px">
+    <div class="container div-margin-bottom">
       <div class="row text-center mt-3">
         <div class="col">
-          <h2 style="padding-bottom: 20px">Galeri TPQ</h2>
+          <h2 class="padding-bottom">Galeri TPQ</h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div
-          class="col-md-4 mt-3"
-          style="display: flex; justify-content: center"
+          class="col-md-4 mt-3 div-card-program"
         >
-          <div class="card" style="width: 28rem">
+          <div class="card div-gallery-width">
             <div class="card-body">
               <img
                 src="../img/poto4.jpg"
@@ -342,10 +284,9 @@
           </div>
         </div>
         <div
-          class="col-md-4 mt-3"
-          style="display: flex; justify-content: center"
+          class="col-md-4 mt-3 div-card-program"
         >
-          <div class="card" style="width: 28rem">
+          <div class="card div-gallery-width">
             <div class="card-body">
               <img
                 src="../img/poto2.jpg"
@@ -357,10 +298,9 @@
           </div>
         </div>
         <div
-          class="col-md-4 mt-3"
-          style="display: flex; justify-content: center"
+          class="col-md-4 mt-3 div-card-program"
         >
-          <div class="card" style="width: 28rem">
+          <div class="card div-gallery-width">
             <div class="card-body">
               <img
                 src="../img/poto3.jpg"
@@ -376,19 +316,20 @@
 
     <!-- INFORMASI -->
 
-    <div style="border-top: 3px solid #ddd">
-      <div class="container" style="margin-bottom: 80px">
-        <div class="row" style="display: flex; justify-content: left">
+    <div class="div-info">
+      <div class="container div-margin-bottom">
+        <div class="row div-justify-left">
           <div
-            class="col-md-4 mt-3"
-            style="display: flex; justify-content: center"
+            class="col-md-4 mt-3 div-card-program"
           >
-            <div class="card" style="width: 18rem; border: none">
+            <div class="card div-card-border">
               <div class="card-body">
-                <h2 class="card-title" style="padding-bottom: 20px">
+                <h2
+                  class="card-title h-info"
+                >
                   Informasi
                 </h2>
-                <p class="card-text">
+                <p class="card-text p-text-align">
                   Untuk informasi lebih lanjut, klik link berikut:
                 </p>
                 <ul>
@@ -402,14 +343,12 @@
           </div>
 
           <div
-            class="col-md-4 mt-3"
-            style="display: flex; justify-content: center"
+            class="col-md-4 mt-3 div-card-program"
           >
-            <div class="card" style="width: 18rem; border: none">
+            <div class="card div-card-border">
               <div class="card-body">
                 <h2
-                  class="card-title"
-                  style="padding-bottom: 20px; text-align: center"
+                  class="card-title h-info"
                 >
                   Santri saat ini
                 </h2>
@@ -438,18 +377,19 @@
           </div>
 
           <div
-            class="col-md-4 mt-3"
-            style="display: flex; justify-content: center"
+            class="col-md-4 mt-3 div-card-program"
           >
-            <div class="card" style="width: 18rem; border: none">
+            <div class="card div-card-border">
               <div class="card-body">
-                <h2 class="card-title" style="padding-bottom: 20px">
+                <h2
+                  class="card-title h-info"
+                >
                   Pengumuman
                 </h2>
-                <p class="card-text">
+                <p class="card-text p-text-align">
                   Presensi Guru dapat dilakukan secara online melalui laman
-                  <a class="ijo-link" href="#">Dashboard</a>. Presensi Santri
-                  dilakukan secara offline/secara langsung.
+                  <a class="ijo-link" href="#">Dashboard</a>. Presensi
+                  Santri dilakukan secara offline atau secara langsung.
                 </p>
               </div>
             </div>
@@ -459,19 +399,14 @@
     </div>
 
     <!-- FOOTER -->
-    <div style="background-color: #f0f4f6">
-      <div class="container" style="border-top: 1px solid #ddd">
-        <div class="row" style="display: flex; justify-content: left">
+    <div class="footer-background">
+      <div class="container footer-border">
+        <div class="row div-justify-left">
           <div
-            class="col-md-4 mt-4"
-            style="display: flex; justify-content: center"
+            class="col-md-4 mt-4 div-card-program"
           >
             <div
-              class="card col-md-4 mt-4"
-              style="
-                width: 18rem;
-                border: none;
-                background-color: #f0f4f6"
+              class="card col-md-4 mt-4 footer-width"
             >
               <div class="card-body">
                 <a class="navbar-brand" href="#tentang">
@@ -480,8 +415,7 @@
                     alt="Logo"
                     width="50"
                     height="45"
-                    class="d-inline-block align-text-center footer"
-                    style="border-radius: 50%; object-fit: fit"
+                    class="d-inline-block align-text-center footer img-new"
                   />
                   <strong>Yayasan Taajul Huffazh Al-Baidhowi</strong>
                 </a>
