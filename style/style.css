@@ -140,82 +140,33 @@ a {
   margin: 0px 5px;
 }
 
-/* css pop up */
-.container-popup {
-  text-align: center;
-  margin-top: 50px;
+@media (max-width: 610px) {
+  .div-jumbotron-new {
+    margin-top: 80px;
+  }
 }
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(13, 81, 20, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  font-size: 20px;
+@media (max-width: 460px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+  .img-new {
+    width: 25;
+    width: 20;
+    border-radius: 50%;
+    object-fit: fit;
+  }
+
+  .navbar-new {
+    margin-bottom: 60px;
+  }
 }
 
-.popup {
-  background-color: #fff;
-  border-radius: 5px;
-  max-width: 80%;
-  padding: 20px;
-}
-
-.popupx {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  width: 65px;
-  margin: 0;
-  padding: 10px;
-  background-color: #acafac;
-  color: #000;
-}
-
-.popup h3 {
-  margin-top: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.popup p {
-  margin-bottom: 5px;
-}
-
-.hidden {
-  display: none;
-}
-
-.cek {
-  margin-bottom: 16px;
-}
-
-.bttn {
-  background-color: #228b22;
-  width: 100px;
-  padding: 8px 6px;
-  border-radius: 5px;
-}
-
-.bttn a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.bttn:hover {
-  background-color: #7fbc94;
-}
-
-.bttn-container {
-  display: flex;
-  justify-content: flex-end;
-  gap: 6px;
+@media (max-width: 376px) {
+  .img-new {
+    width: 20;
+    width: 15;
+    border-radius: 50%;
+    object-fit: fit;
+  }
 }

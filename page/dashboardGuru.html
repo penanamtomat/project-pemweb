@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TPQ Al-Baidhowi >> Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../style/dashboard.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button id="toggle-btn" type="button">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="sidebar-logo">
+            <!-- <a href="#">Admin Dashboard</a> -->
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a href="absenGuru.html" class="sidebar-link">
+              <i class="bi bi-calendar-plus"></i>
+              <span>Absen</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="bru">
+              <i class="bi bi-person-fill-check"></i>
+              <span>Santri</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <i class="bi bi-gear"></i>
+              <span>Setting</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a href="landingpage.html" class="sidebar-link" id="log">
+            <i class="bi bi-box-arrow-left"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <div class="main">
+        <nav class="navbar navbar-expand px-4 py-3">
+          <form action="#" class="d-none d-sm-inline-block">
+            <div class="input-group input-group-navbar">
+              <input
+                type="text"
+                class="form-control border-0 rounded-0"
+                placeholder="search.."
+              />
+              <button class="btn border-0 rounded-0" type="button">
+                search
+              </button>
+            </div>
+          </form>
+
+          <!-- Example single danger button -->
+
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                  <i class="bi bi-person-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end rounded">
+                  <a class="dropdown-item" href="login.html">Profile</a>
+                  <a class="dropdown-item" href="login.html">Setting</a>
+                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" id="logout" href="landingpage.html"
+                    >Logout</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main class="content px-3 py-4">
+          <div class="container-fluid">
+            <div class="mb-3">
+              <h3 class="fw-bold fs-4 mb-3">Nama Guru</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-bar-chart-line"></i>
+                  <span id="santri">Data Santri</span>
+                </div>
+                <div class="card-body">
+                  <div>
+                    <table class="table table-bordered text-center tabel">
+                      <thead>
+                        <tr>
+                          <th class="fixed">No</th>
+                          <th>Nama</th>
+                          <th>Alamat</th>
+                          <th>Jadwal</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <!-- 
+                          perulangan buat tr
+                       -->
+                      </tbody>
+                    </table>
+                  </div>
+                  <canvas id="myBarChart" width="100%" height="40"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- POP UP LOGOUT -->
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <h5>Apakah Anda Yakin?</h5>
+        <div class="divide">
+        </div>
+        <div class="bttn-container">
+        <button class="popupx bttn">
+          <a href="landingpage.html">Ya</a>
+        </button>
+
+          <button class="popupx" id="closePopupBttn">
+            <a href="#">Tidak</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script/dashboard.js"></script>
+  </body>
+</html>

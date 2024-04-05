@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPQ Al-Baidhowi >> Log In</title>
+    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p>LOG IN</p>
+        </div>
+        <form action="#" method="POST">
+            <div class="login">
+                <div class="form-login">
+                    <input type="text" name="username" id="username" placeholder="Username" class="data" required>
+                </div>
+                <div class="form-login">
+                    <input type="password" name="password" id="password" placeholder="Password" class="data" required>
+                </div>
+                <div class="check-login">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember Password</label>
+                </div>
+            </div>
+            <div class="login">
+                <div class="footer">
+                    <div class="forgot-pass"><a href="#">Lupa Password?</a></div>
+                    <div class="submit"><button type="submit" id="submit">Login</button></div>
+                </div>
+            </div>
+        </form>
+        <div class="need-account">
+            <p>Belum punya akun? Silahkan <a href="pendaftaran.html">daftar</a>!</p>
+        </div>
+    </div>
+
+
+    <!-- POP UP LOGOUT -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="bttn-container">
+                <button class="popupx" id="closePopupBttn">
+                  <a href="#">x</a>
+                </button>
+            </div>
+          <p>akun tidak ditemukan</p>
+          <p>butuh akun?</p>
+          <p>klik <a href="pendaftaran.html">daftar</a></p>
+          <div class="divide">
+          </div>
+          <p>atau</p>
+          <p>kembali ke menu <a href="landingpage.html">awal</a></p>
+        </div>
+      </div>
+
+
+    <script src="../script/login.js"></script>
+</body>
+</html>

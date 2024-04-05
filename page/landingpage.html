@@ -19,7 +19,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" href="../img/icon.png" type="image/x-icon"/>
-    <script src="../script/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -64,13 +63,19 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link putih text-size" href="pendaftaran.html" id="popupReg">Daftar</a>
+              <a class="nav-link putih text-size" href="pendaftaran.html">Daftar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link putih text-size" href="/antrian">Antrian</a>
+              <a class="nav-link putih text-size" href="antrian.html">Antrian</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
               <a
+              class="nav-link putih text-size"
+              href="login.html"
+            >
+              Login
+            </a>
+              <!-- <a
                 class="nav-link dropdown-toggle putih text-size"
                 href="#"
                 role="button"
@@ -78,45 +83,19 @@
                 aria-expanded="false"
               >
                 Login
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-size hov" href="#">Admin</a></li>
-                <li><a class="dropdown-item text-size hov" href="#">Guru</a></li>
-                <li><a class="dropdown-item text-size hov" href="#">Santri</a></li>
+              </a> -->
+              <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-size hov" href="login.html">Admin</a></li>
+                <li><a class="dropdown-item text-size hov" href="login.html">Guru</a></li>
+                <li><a class="dropdown-item text-size hov" href="login.html">Santri</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item text-size hov" href="#">Bantuan</a></li>
-              </ul>
+              </ul> -->
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <!-- POP UP PERSYARATAN -->
-<div class="popup-overlay" id="popupOverlay">
-  <div class="popup">
-      <h3>Persyaratan</h3>
-      <ul>
-          <li>Pastikan Anda mengisi data diri dengan benar</li>
-          <li>Jika ada kesalahan data, silahkan hubungi admin</li>
-          <li>Pastikan Anda memasukkan data diri yang belum pernah didaftarkan sebelumnya</li>
-          <li>Jika Anda memaksa untuk melakukan pendaftaran lagi, maka data yang sebelumnya akan secara otomatis di hapus oleh sistem</li>
-      </ul>
-      <div class="cek">
-          <label for="agreeCheckbox">
-              <input type="checkbox" id="agreeCheckbox"> Saya menyetujui persyaratan di atas.
-          </label>
-      </div>
-
-      <div class="bttn-container">
-          <div class="bttn hidden" id="continueToReg" >
-              <a href="pendaftaran.html">Lanjutkan</a>
-          </div>
-
-          <button class="popupx" id="closePopupBttn">batal</button>
-      </div>
-  </div>
-</div>
 
     <!-- JUMBOTRON -->
     <div
@@ -333,8 +312,8 @@
                   Untuk informasi lebih lanjut, klik link berikut:
                 </p>
                 <ul>
-                  <li><a href="#" class="card-link ijo-link">Antrian</a></li>
-                  <li><a href="#" class="card-link ijo-link">Daftar</a></li>
+                  <li><a href="antrian.html" class="card-link ijo-link">Antrian</a></li>
+                  <li><a href="pendaftaran.html" class="card-link ijo-link">Daftar</a></li>
                   <li><a href="#" class="card-link ijo-link">Santri</a></li>
                   <li><a href="#" class="card-link ijo-link">Bantuan</a></li>
                 </ul>
@@ -388,7 +367,7 @@
                 </h2>
                 <p class="card-text p-text-align">
                   Presensi Guru dapat dilakukan secara online melalui laman
-                  <a class="ijo-link" href="#">Dashboard</a>. Presensi
+                  <a class="ijo-link" href="login.html">Dashboard</a>. Presensi
                   Santri dilakukan secara offline atau secara langsung.
                 </p>
               </div>
