@@ -27,7 +27,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.35s ease-in-out;
   background-color: #fff;
   min-width: 0;
@@ -256,10 +256,12 @@ footer {
 @media(max-width: 768px){
   .btn {
     background-color: #228b22;
-    background-color: #228b22;
     color: #fff;
     font-family: "poppins", sans-serif;
     cursor: pointer;
+  }
+  table{
+    font-size: 12px;
   }
 }
 
@@ -331,7 +333,22 @@ footer {
 }
 
 .bttn:hover {
-  background-color: #7fbc94;
+  background-color: #19843e;
+  /* outline-color: #228b22; */
+}
+
+.button {
+  padding: 4px 6px;
+  border-radius: 5px;
+  background-color: #228b22;
+  color: #fff;
+  border: none;
+}
+
+.button:hover{
+  border: 1px solid #228b22;
+  background-color: #fff;
+  color: #000;
 }
 
 .bttn-container {

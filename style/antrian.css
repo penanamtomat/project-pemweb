@@ -27,10 +27,26 @@ th, td{
   padding: 4px;
 }
 
+.backtohome{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.backtohome a {
+  text-decoration: none;
+  color: white;
+  background-color: #228b22;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
 @media (max-width: 665px) {
   th,
   td {
     font-size: 16px;
+  }
+  .backtohome a{
+    font-size: 12px;
   }
 }
 
@@ -65,4 +81,5 @@ th, td{
   .antrian {
     padding: 20px 5px;
   }
+  
 }
