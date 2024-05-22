@@ -128,6 +128,7 @@ ENV/
 env.bak/
 venv.bak/
 envpemweb/
+migrations/
 
 # Spyder project settings
 .spyderproject
