@@ -1,0 +1,6 @@
+Flask
+dotenv
+mysql-connector-python
+jinja2
+pymsql
+sqlalchemy
