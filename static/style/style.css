@@ -1,0 +1,172 @@
+body p,
+a,
+th,
+.text-size {
+  font-size: 20px;
+}
+
+.navbar-new {
+  background-color: #228b22;
+}
+
+.img-new {
+  border-radius: 50%;
+  object-fit: fit;
+}
+
+.div-jumbotron-new {
+  margin-top: 48px;
+}
+
+.div-card-new {
+  width: 650px;
+  border: none;
+}
+
+.div-margin-bottom {
+  margin-bottom: 80px;
+}
+
+.div-card-program {
+  display: flex;
+  justify-content: center;
+}
+
+.card-width {
+  width: 18rem;
+}
+
+.padding-bottom {
+  padding-bottom: 20px;
+}
+
+.div-gallery-width {
+  width: 28rem;
+}
+
+.div-info {
+  border-top: 3px solid #ddd;
+}
+
+.div-justify-left {
+  display: flex;
+  justify-content: left;
+}
+
+.div-card-border {
+  width: 18rem;
+  border: none;
+}
+
+.h-info {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.p-text-align {
+  text-align: justify;
+}
+
+.footer-background {
+  border-top: 3px solid #ddd;
+  background-color: #f0f4f6;
+}
+
+.footer-width {
+  width: 18rem;
+  border: none;
+  background-color: #f0f4f6;
+}
+
+.tentang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0px 80px;
+}
+
+.tengah {
+  width: 650px;
+  padding: 10px;
+}
+
+.footer {
+  margin: 20px 0px 20px;
+}
+
+.tabel {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.pad-left {
+  padding-left: 10px;
+  width: 350px;
+}
+
+.ijo {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 5px;
+  color: #228b22;
+}
+
+.ijo:hover,
+.ijo-link:hover,
+.hov:hover {
+  color: #7fbc94;
+}
+
+.putih:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #228b22;
+}
+
+.copyright {
+  background-color: #868e89;
+  padding: 15px 0px 1px;
+  text-align: center;
+}
+
+.design {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0px 5px;
+}
+
+@media (max-width: 610px) {
+  .div-jumbotron-new {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 460px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+  .img-new {
+    width: 25;
+    width: 20;
+    border-radius: 50%;
+    object-fit: fit;
+  }
+
+  .navbar-new {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 376px) {
+  .img-new {
+    width: 20;
+    width: 15;
+    border-radius: 50%;
+    object-fit: fit;
+  }
+}
