@@ -10,5 +10,5 @@ migrate = Migrate(app, db)
 
 
 
-from app.model import calonSantri, user, user_level
+from app.model import calon_santri, user, user_level, guru
 from app import routes

@@ -1,4 +1,4 @@
-from app.model.calonSantri import daftarCalonSantri
+from app.model.calon_santri import daftarCalonSantri
 from app import response, app, db
 from flask import request
 
