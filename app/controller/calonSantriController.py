@@ -1,10 +1,10 @@
-from app.model.pendaftaran import Pendaftaran
+from app.model.calonSantri import daftarCalonSantri
 from app import response, app, db
 from flask import request
 
 def index():
     try:
-        calonSantri = Pendaftaran.query.all()
+        calonSantri = daftarCalonSantri.query.all()
         data = formatArray(calonSantri)
         return response.success(data, "success")
     except Exception as e:

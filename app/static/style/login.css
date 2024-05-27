@@ -11,8 +11,15 @@ body {
     rgba(34, 139, 34, .8),
     rgba(34, 139, 34, .8)
   ),
-  url(../img/jumbotron1.jpg);
-  background-size: cover;
+  url(../images/logo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {

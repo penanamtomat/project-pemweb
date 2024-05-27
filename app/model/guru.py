@@ -1,10 +1,9 @@
-# from app import db
+from app import db
 
-# class Guru(db.Model):
-#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-#     nog = db.Column(db.String(5), unique=True)
-#     username = db.Column(db.String(10))
-#     password = db.Column(db.String(10))
+class Guru(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    nog = db.Column(db.String(5), unique=True)
+    nama_guru = db.Column(db.String(50))
 
-#     def __repr__(self):
-#         return '<Guru {}>'.format(self.username)
+    def __repr__(self):
+        return '<Guru {}>'.format(self.username)

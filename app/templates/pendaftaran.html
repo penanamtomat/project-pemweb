@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/pendaftaran.css')}}" />
-    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}" type="image/x-icon" />
     <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -18,7 +18,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top navbar-new">
       <div class="container">
-        <a class="navbar-brand" href="/">Pendaftaran Santri Baru</a>
+        <a class="navbar-brand" href="/pendaftaran">Pendaftaran Santri Baru</a>
       </div>
     </nav>
 
@@ -40,7 +40,7 @@
           <div class="bttn hidden" id="continueToReg">Lanjutkan</div>
 
           <button class="popupx" id="closePopupBttn">
-            <a href="landingpage.html">batal</a>
+            <a href="/">batal</a>
           </button>
         </div>
       </div>
@@ -184,12 +184,12 @@
         <div class="divide">
           <div>
             <!-- <button class="bttn"> -->
-            <a href="antrian.html" class="bttn">antrian</a>
+            <a href="/antrian" class="bttn">antrian</a>
             <!-- </button> -->
           </div>
           <div>
             <!-- <button class="bttn"> -->
-            <a href="landingpage.html" class="bttn">awal</a>
+            <a href="/landingpage" class="bttn">awal</a>
             <!-- </button> -->
           </div>
         </div>

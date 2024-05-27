@@ -1,15 +1,19 @@
 from app import app
-# from app.controller import calonSantri
+from app.controller import calonSantriController
 from flask import render_template
 
 @app.route('/')
 def index():
     return render_template('landingpage.html')
-    # return 'Hello TPQ' 
 
-# app.route('/pendaftaran', methods=['GET'])
-# def calonPendaftar():
-#     return calonSantri.index()
+@app.route('/pendaftaran')
+def calonPendaftar():
+    return render_template('pendaftaran.html')
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+@app.route('/antrian')
+def antrian():
+    return render_template('antrian.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')

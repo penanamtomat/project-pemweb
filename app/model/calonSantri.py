@@ -7,7 +7,7 @@ def generate_id():
     random_digits = "".join([digits[0] for _ in range(4)])
     return prefix + random_digits
 
-class Pendaftaran(db.Model):
+class daftarCalonSantri(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     id_pendaftar = db.Column(db.String(10), nullable=False, unique=True, default=generate_id)
     nama = db.Column(db.String(50), nullable=False)
