@@ -163,5 +163,5 @@ cython_debug/
 
 
 # folders and file that's should be
-static/images
-static/uploads
+app/static/images
+app/static/uploads
