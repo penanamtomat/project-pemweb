@@ -5,7 +5,7 @@ class Guru(db.Model):
     nog = db.Column(db.String(5), unique=True)
     nama_guru = db.Column(db.String(50), nullable=False)
     tmpt_lahir_guru = db.Column(db.String(20), nullable=False)
-    tgl_lahir_guru = db.Column(db.Date(20), nullable=False)
+    tgl_lahir_guru = db.Column(db.Date, nullable=False)
     alamat_guru = db.Column(db.String(100), nullable=False)
     no_hp_guru = db.Column(db.String(15), nullable=False)
 
