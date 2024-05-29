@@ -9,6 +9,6 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
-
-from app.model import calon_santri, user, user_level, guru, santri, spp
+from app.model import santri
+# from app.model import calon_santri, user, user_level, guru, santri, spp, honor
 from app import routes
