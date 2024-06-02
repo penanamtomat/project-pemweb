@@ -11,12 +11,12 @@
       crossorigin="anonymous"
     />
 
-    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="../style/dashboard.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style/dashboard.css')}}" />
   </head>
   <body>
     <div class="wrapper">
@@ -31,7 +31,7 @@
         </div>
         <ul class="sidebar-nav">
           <li class="sidebar-item">
-            <a href="dashboardSantri.html#bio" class="sidebar-link">
+            <a href="/dashboardSantri#bio" class="sidebar-link">
               <i class="bi bi-person-fill"></i>
               <span>Biodata</span>
             </a>
@@ -50,7 +50,7 @@
           </li>
         </ul>
         <div class="sidebar-footer">
-          <a href="landingpage.html" class="sidebar-link">
+          <a href="/landingpage" class="sidebar-link">
             <i class="bi bi-box-arrow-left"></i>
             <span>Logout</span>
           </a>
@@ -138,7 +138,7 @@
         <div class="divide"></div>
         <div class="bttn-container">
           <button class="popupx bttn" id="continueToReg">
-            <a href="landingpage.html">Ya</a>
+            <a href="/landingpage">Ya</a>
           </button>
 
           <button class="popupx" id="closePopupBttn">
@@ -153,6 +153,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="../script/dashboard.js"></script>
+    <script src="{{url_for('static', filename='script/dashboard.js')}}"></script>
   </body>
 </html>

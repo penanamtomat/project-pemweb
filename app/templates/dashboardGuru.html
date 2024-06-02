@@ -4,19 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TPQ Al-Baidhowi >> Dashboard</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
 
-    <link rel="icon" href="../img/icon.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="../style/dashboard.css" />
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style/dashboard.css')}}" />
   </head>
   <body>
     <div class="wrapper">
@@ -31,7 +23,7 @@
         </div>
         <ul class="sidebar-nav">
           <li class="sidebar-item">
-            <a href="absenGuru.html" class="sidebar-link">
+            <a href="/absenGuru" class="sidebar-link">
               <i class="bi bi-calendar-plus"></i>
               <span>Absen</span>
             </a>
@@ -50,7 +42,7 @@
           </li>
         </ul>
         <div class="sidebar-footer">
-          <a href="landingpage.html" class="sidebar-link" id="log">
+          <a href="/landingpage" class="sidebar-link" id="log">
             <i class="bi bi-box-arrow-left"></i>
             <span>Logout</span>
           </a>
@@ -61,14 +53,8 @@
         <nav class="navbar navbar-expand px-4 py-3">
           <form action="#" class="d-none d-sm-inline-block">
             <div class="input-group input-group-navbar">
-              <input
-                type="text"
-                class="form-control border-0 rounded-0"
-                placeholder="search.."
-              />
-              <button class="btn border-0 rounded-0" type="button">
-                search
-              </button>
+              <input type="text" class="form-control border-0 rounded-0" placeholder="search.." />
+              <button class="btn border-0 rounded-0" type="button">search</button>
             </div>
           </form>
 
@@ -84,9 +70,7 @@
                   <a class="dropdown-item" href="login.html">Profile</a>
                   <a class="dropdown-item" href="login.html">Setting</a>
                   <hr class="dropdown-divider" />
-                  <a class="dropdown-item" id="logout" href="landingpage.html"
-                    >Logout</a
-                  >
+                  <a class="dropdown-item" id="logout" href="/landingpage">Logout</a>
                 </div>
               </li>
             </ul>
@@ -118,7 +102,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                      <!-- 
+                        <!-- 
                           perulangan buat tr
                        -->
                       </tbody>
@@ -137,12 +121,11 @@
     <div class="popup-overlay" id="popupOverlay">
       <div class="popup">
         <h5>Apakah Anda Yakin?</h5>
-        <div class="divide">
-        </div>
+        <div class="divide"></div>
         <div class="bttn-container">
-        <button class="popupx bttn">
-          <a href="landingpage.html">Ya</a>
-        </button>
+          <button class="popupx bttn">
+            <a href="/landingpage">Ya</a>
+          </button>
 
           <button class="popupx" id="closePopupBttn">
             <a href="#">Tidak</a>
@@ -151,11 +134,7 @@
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../script/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='script/dashboard.js')}}"></script>
   </body>
 </html>
