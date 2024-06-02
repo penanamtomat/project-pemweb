@@ -1,0 +1,7 @@
+flask
+dotenv
+sqlalchemy
+migrate
+pymysql
+mysql-connector-python
+jinja2
