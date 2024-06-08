@@ -12,10 +12,10 @@
       <p>Daftar Antrian Santri</p>
     </nav>
 
-    <div class="backtohome"><a href="/landingpage">Beranda</a></div>
+    <div class="backtohome"><a href="/">Beranda</a></div>
 
     <div class="antrian">
-      <table class="tabel" cellspacing = "0">
+      <table class="tabel" cellspacing="0">
         <thead>
           <tr>
             <th>No</th>
@@ -27,14 +27,30 @@
           </tr>
         </thead>
         <tbody>
-        <!-- 
-            perulangan buat tr
-         -->
+          {% for p in santri %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{p.nama}}</td>
+            <td>{{p.ttl}}</td>
+            <td>{{p.jenis_kelamin}}</td>
+            <td>{{p.jadwal}}</td>
+            <td>{{p.tahunan}}</td>
+            <td>{{p.spp}}</td>
+            <td>{{p.ayah}}</td>
+            <td>{{p.job_ayah}}</td>
+            <td>{{p.ibu}}</td>
+            <td>{{p.job_ibu}}</td>
+            <td>{{p.alamat}}</td>
+            <td>{{p.no_hp}}</td>
+            <td><a href="/app/static/uploads{{p.kartu_keluarga}}">Buka</a></td>
+            <!-- <td>
+              <a href="/{{p.id}}/update">Edit</a>
+              <a href="/{{p.id}}/delete">Delete</a>
+            </td> -->
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>
-
-
-
   </body>
 </html>

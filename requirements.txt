@@ -5,3 +5,5 @@ migrate
 pymysql
 mysql-connector-python
 jinja2
+werkzeug
+jwt

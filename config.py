@@ -8,6 +8,10 @@ class Config(object):
     USERNAME = str(os.environ.get("DB_USERNAME"))
     PASSWORD = str(os.environ.get("DB_PASSWORD"))
 
+    JWT_SECRET_KEY = str(os.environ.get("JWT_SECRET"))
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://"+USERNAME+':'+PASSWORD+'@'+HOST+'/'+DATABASE
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_RECORD_QUERIES = True
+
+    UPLOAD_FOLDER = str(os.environ.get("UPLOAD_FOLDER"))
+    MAX_FILE_SIZE = 2 * 1024 * 1024 #maksimal ukuran file yg di upload 2MB

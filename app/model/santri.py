@@ -17,7 +17,7 @@ class Santri(db.Model):
     no_hp = db.Column(db.String(15), nullable=False)
     tahunan = db.Column(db.String(10), nullable=False)
     spp = db.Column(db.String(10), nullable=False)
-    kartu_keluarga = db.Column(db.String(20), nullable=False)
+    kartu_keluarga = db.Column(db.String(100), nullable=False)
     
     def __repr__(self):
         return '<Santri {}>'.format(self.nama_santri)
