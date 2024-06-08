@@ -13,22 +13,6 @@ def allowed_file(filename):
 
 def daftarSantri():
     try:
-        # nama_santri = request.form['nama']
-        # tmpt_lahir_santri = request.form['ttl']
-        # tgl_lahir_santri = request.form['tgl']
-        # nama_ayah = request.form['dadname']
-        # pekerjaan_ayah = request.form['dadkerja']
-        # nama_ibu = request.form['momname']
-        # pekerjaan_ibu = request.form['momwork']
-        # jk_santri = request.form['jk']
-        # alamat_santri = request.form['alamat']
-        # jadwal = request.form['jadwal']
-        # no_hp = request.form['nohp']
-        # tahunan = request.form['tahunan']
-        # spp = request.form['spp']
-        # kartu_keluarga = request.files['kk']
-
-        #menerima data dari request
         nama_santri = request.form.get('nama')
         tmpt_lahir_santri = request.form.get('ttl')
         tgl_lahir_santri = request.form.get('tgl')
@@ -68,7 +52,10 @@ def daftarSantri():
             db.session.commit()
 
             return response.success('', 'Data santri berhasil ditambahkan')
-        else:
-            return response.failure([], 'Format kartu keluarga tidak sesuai')
+        # else:
+        #     return response.failure([], 'Format kartu keluarga tidak sesuai')
     except Exception as e:
         print(e)
+
+# def showData():
+    

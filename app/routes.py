@@ -14,12 +14,12 @@ from flask_jwt_extended import jwt_required
 def landingpage():
     return render_template('landingpage.html')
 
-@app.route('/pendaftaran')
-def pendaftaran():
+# @app.route('/pendaftaran')
+# def pendaftaran():
     # return santriController.daftarSantri()
-    return render_template('pendaftaran.html')
+#     return render_template('pendaftaran.html')
 
-@app.route('/pendaftaran/save', methods=['POST'])
+@app.route('/pendaftaran', methods=['POST'])
 def pendaftaran_save():
     return santriController.daftarSantri()
     # if request.method == 'GET':
@@ -52,17 +52,18 @@ def antrian():
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     if request.method == 'POST':
-        pengguna = userController.login()
-        if pengguna:
-            aktor = pengguna.get('id_level_user')
-            if aktor == '1':
-                return redirect('/dashboard')
-            elif aktor == '2':
-                return redirect('/dashboardGuru')
-            else:
-                return
+        return userController.login()
+        # pengguna = userController.login()
+        # if pengguna:
+        #     aktor = pengguna.get('id_level_user')
+        #     if aktor == '1':
+        #         return redirect('/dashboard')
+        #     elif aktor == '2':
+        #         return redirect('/dashboardGuru')
+        #     else:
+        #         return
     else:
-        return render_template('login.html')
+        return userController.tampilAkun()
         # return userController.login()
     # return render_template('login.html')
 
