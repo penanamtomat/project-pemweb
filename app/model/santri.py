@@ -2,7 +2,7 @@ from app import db
 
 class Santri(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    no_daftar = db.Column(db.String(10), nullable=False)
+    no_daftar = db.Column(db.String(10))
     no_santri = db.Column(db.String(10))
     nama_santri = db.Column(db.String(50), nullable=False)
     tmpt_lahir_santri = db.Column(db.String(20), nullable=False)
