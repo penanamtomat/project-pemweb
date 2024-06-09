@@ -100,81 +100,103 @@
                 </div>
                 <div class="card-body new">
                   <div>
-                    <form action="#" method="post">
+                    <form action="/{{santri.id_santri}}/edit/save" method="POST">
                       <table>
                         <thead class="listdata">
-                          <tr>
-                            <th>
-                              <label for="nama"> Nama</label>
-                            </th>
-                            <td>
-                              <input type="text" name="nama" id="nama">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="Tl">Tempat lahir</label>
-                            </th>
-                            <td>
-                              <input type="text" name="Tl" id="Tl" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="tgl">Tanggal lahir</label>
-                            </th>
-                            <td>
-                              <input type="date" name="tgl" id="tgl">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="dadname">Nama Ayah</label>
-                            </th>
-                            <td>
-                              <input type="text" name="dadname" id="dadname" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="dadkerja">Pekerjaan Ayah</label>
-                            </th>
-                            <td>
-                              <input type="text" name="dadkerja" id="dadkerja">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="momname">Nama Ibu</label>
-                            </th>
-                            <td>
-                              <input type="text" name="momname" id="momname" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="momkerja">Pekerjaan Ibu</label>
-                            </th>
-                            <td>
-                              <input type="text" name="momkerja" id="momkerja">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="nohp">No HP</label>
-                            </th>
-                            <td>
-                              <input type="text" name="nohp" id="nohp" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="alamat">Alamat</label>
-                            </th>
-                            <td>
-                              <textarea name="alamat" id="alamat" cols="30"></textarea>
-                            </td>
-                          </tr>
+                            <div class="col-md-6">
+                                <label for="nama" class="form-label">Nama Santri <span>*</span></label>
+                                <input type="text" class="form-control" id="nama" name="nama" value="{{santri.nama_santri}}" required />
+                                <div class="hidden" id="cek"><span class="text-danger">nama harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-6">
+                                <p></p>
+                                <label for="ttl" class="form-label">Tempat tanggal lahir <span>*</span></label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="ttl" name="ttl" value="{{santri.tmpt_lahir_santri}}" required />
+                                  <input type="date" class="form-control" name="tgl" id="tgl" value="{{santri.tgl_lahir_santri}}" required />
+                                </div>
+                                <div class="hidden" id="cek1"><span class="text-danger">ttl harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-6">
+                                <p></p>
+                                <label for="dadname" class="form-label">Nama Ayah <span>*</span></label>
+                                <input type="text" class="form-control" id="dadname" name="dadname" value="{{santri.nama_ayah}}" required />
+                                <div class="hidden" id="cek2"><span class="text-danger">nama ayah harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-6">
+                                <p></p>
+                                <label for="dadkerja" class="form-label">Pekerjaan Ayah <span>*</span></label>
+                                <input type="text" class="form-control" id="dadkerja" name="dadkerja" value="{{santri.pekerjaan_ayah}}" required />
+                                <div class="hidden" id="cek3"><span class="text-danger">pekerjaan ayah harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-6">
+                                <p></p>
+                                <label for="momname" class="form-label">Nama Ibu <span>*</span></label>
+                                <input type="text" class="form-control" id="momname" name="momname" value="{{santri.nama_ibu}}" required />
+                                <div class="hidden" id="cek4"><span class="text-danger">nama ibu harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-6">
+                                <p></p>
+                                <label for="momwork" class="form-label">Pekerjaan Ibu <span>*</span></label>
+                                <input type="text" class="form-control" id="momwork" name="momwork" value="{{santri.pekerjaan_ibu}}" required />
+                                <div class="hidden" id="cek5"><span class="text-danger">pekerjaan ibu harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-3">
+                                <p></p>
+                                <label for="jk" class="form-label">Jenis Kelamin <span>*</span></label>
+                                <select name="jk" id="jk" class="form-select width-sel" required>
+                                    <option value="" {% if santri.jk_santri == '' %}selected{% endif %}>--pilih--</option>
+                                    <option value="L" {% if santri.jk_santri == 'L' %}selected{% endif %}>Laki-laki</option>
+                                    <option value="P" {% if santri.jk_santri == 'P' %}selected{% endif %}>Perempuan</option>
+                                </select>
+                                <div class="hidden" id="cek6"><span class="text-danger">jenis kelamin harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-3">
+                                <p></p>
+                                <label for="nohp" class="form-label">NO. HP Wali <span>*</span></label>
+                                <input type="tel" class="form-control" id="nohp" name="nohp" value="{{santri.no_hp}}" required pattern="(\+62|62|0)8[1-9][0-9]{6,9}$)" />
+                                <div class="hidden" id="cek7"><span class="text-danger">no hp harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="col-md-6">
+                                <p></p>
+                                <label for="alamat" class="form-label">Alamat <span>*</span></label>
+                                <textarea type="text" class="form-control" id="alamat" name="alamat" required>{{santri.alamat_santri}}</textarea>
+                                <div class="hidden" id="cek8"><span class="text-danger">alamat harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                              </div>
+                              <div class="row justify-content-around mt-4 border-top">
+                                <div class="col pad-bottom">
+                                    <p></p>
+                                  <h5>Jadwal Masuk Santri</h5>
+                                  <div class="pad">
+                                    <label for="jadwal">Jadwal Masuk <span>*</span></label>
+                                    <select name="jadwal" class="form-select width-sel" id="jadwal" aria-label="Default select example" required>
+                                        <option value="" {% if santri.jadwal == '' %}selected{% endif %}>--Pilih--</option>
+                                        <option value="Sore" {% if santri.jadwal == 'Sore' %}selected{% endif %}>Sore</option>
+                                        <option value="Malam" {% if santri.jadwal == 'Malam' %}selected{% endif %}>Malam</option>
+                                    </select>
+                                    <div class="hidden" id="cek9"><span class="text-danger">jadwal harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                                  </div>
+                                </div>
+                                <div class="col pad-bottom pad">
+                                   <p></p>
+                                  <h5>Administrasi</h5>
+                                  <label for="tahunan">Pemeliharaan bangunan: Rp. 75.000 / Rp. 100.000</label><span>*</span>
+                                  <select name="tahunan" id="tahunan" class="form-select width-sel" aria-label="Default select example" required>
+                                    <option value="" {% if santri.tahunan == '' %}selected{% endif %}>--Pilih--</option>
+                                    <option value="75000" {% if santri.tahunan == '75000' %}selected{% endif %}>Rp. 75.000</option>
+                                    <option value="100000" {% if santri.tahunan == '100000' %}selected{% endif %}>Rp. 100.000</option>
+                                  </select>
+                                  <div class="hidden" id="cek10"><span class="text-danger"> biaya administrasi harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                                  <p></p>
+                                  <label for="spp">SPP Bulanan: Rp. 30.000 / Rp. 50.000  </label>
+                                    <select name="spp" id="spp" class="form-select width-sel" aria-label="Default select example" required>
+                                        <option value="" {% if santri.spp == '' %}selected{% endif %}>--Pilih--</option>
+                                        <option value="30000" {% if santri.spp == '30000' %}selected{% endif %}>Rp. 30.000</option>
+                                        <option value="50000" {% if santri.spp == '50000' %}selected{% endif %}>Rp. 50.000</option>
+                                    </select>
+                                  <div class="hidden" id="cek11"><span class="text-danger"> biaya administrasi harus diisi</span><i class="bi bi-exclamation-circle-fill text-danger"></i></div>
+                                </div>
+                              </div>
                         </thead>
                         <tbody>
                         </tbody>
