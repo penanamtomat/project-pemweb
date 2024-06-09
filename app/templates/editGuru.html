@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TPQ Al-Baidhowi >> Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='style/dashboard.css')}}" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+              <button id="toggle-btn" type="button">
+                <i class="bi bi-list"></i>
+              </button>
+              <div class="sidebar-logo">
+                <!-- <a href="#">Admin Dashboard</a> -->
+              </div>
+            </div>
+            <ul class="sidebar-nav">
+              <li class="sidebar-item">
+                <a href="/dashboard" class="sidebar-link">
+                  <i class="bi bi-house-door-fill"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="bru">
+                  <i class="bi bi-person-video"></i>
+                  <span>Guru</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="/showSantri" class="sidebar-link">
+                  <i class="bi bi-person-fill-check"></i>
+                  <span>Santri</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="/update" class="sidebar-link">
+                  <i class="bi bi-journal-arrow-up"></i>
+                  <span>Update</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+
+      <div class="main">
+        <nav class="navbar navbar-expand px-4 py-3">
+          <form action="#" class="d-none d-sm-inline-block">
+            <div class="input-group input-group-navbar">
+              <input
+                type="text"
+                class="form-control border-0 rounded-0"
+                placeholder="search.."
+              />
+              <button class="btn border-0 rounded-0" type="button">
+                search
+              </button>
+            </div>
+          </form>
+
+          <!-- Example single danger button -->
+
+          <div class="navbar-collapse">
+            <div class="navbar-nav ms-auto">
+              <a href="/" class="logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span id="logout">Logout</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <main class="content px-3 py-4">
+          <div class="container-fluid">
+            <div class="mb-3">
+              <h3 class="fw-bold fs-4 mb-3">Edit Data Guru</h3>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <i class="bi bi-bar-chart-line"></i>
+                  <span>Edit Data Guru</span>
+                </div>
+                <div class="card-body new">
+                  <div>
+                    <form action="#" method="post">
+                      <table>
+                        <thead class="listdata">
+                          <tr>
+                            <th>
+                              <label for="nama"> Nama</label>
+                            </th>
+                            <td>
+                              <input type="text" name="nama" id="nama">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <label for="Tl">Tempat lahir</label>
+                            </th>
+                            <td>
+                              <input type="text" name="Tl" id="Tl" style="margin: 5px 0px;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <label for="tgl">Tanggal lahir</label>
+                            </th>
+                            <td>
+                              <input type="date" name="tgl" id="tgl">
+                            </td>
+                          </tr>
+                          </tr>
+                          <tr>
+                            <th>
+                              <label for="nohp">No HP</label>
+                            </th>
+                            <td>
+                              <input type="text" name="nohp" id="nohp" style="margin: 5px 0px;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <label for="alamat">Alamat</label>
+                            </th>
+                            <td>
+                              <textarea name="alamat" id="alamat" cols="30"></textarea>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                      <button type="submit" name="submit" class="button mt-5">Simpan</button>
+                    </form>
+                  </div>
+                  <canvas id="myBarChart" width="100%" height="40"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- POP UP LOGOUT -->
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup">
+        <h5>Apakah Anda Yakin?</h5>
+        <div class="divide">
+        </div>
+        <div class="bttn-container">
+        <button class="popupx bttn"  id="continueToReg">
+          <a href="/">Ya</a>
+        </button>
+
+          <button class="popupx" id="closePopupBttn">
+            <a href="#">Tidak</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{url_for('static', filename='script/dashboard.js')}}"></script>
+  </body>
+</html>

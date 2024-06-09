@@ -1,13 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TPQ Al-Baidhowi >> Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 
     <link rel="icon" href="{{url_for('static', filename='images/icon.png')}}" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="{{url_for('static', filename='style/dashboard.css')}}" />
   </head>
   <body>
@@ -53,8 +62,14 @@
         <nav class="navbar navbar-expand px-4 py-3">
           <form action="#" class="d-none d-sm-inline-block">
             <div class="input-group input-group-navbar">
-              <input type="text" class="form-control border-0 rounded-0" placeholder="search.." />
-              <button class="btn border-0 rounded-0" type="button">search</button>
+              <input
+                type="text"
+                class="form-control border-0 rounded-0"
+                placeholder="search.."
+              />
+              <button class="btn border-0 rounded-0" type="button">
+                search
+              </button>
             </div>
           </form>
 
@@ -67,78 +82,54 @@
                   <i class="bi bi-person-circle"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end rounded">
-                  <a class="dropdown-item" href="/profil">Profile</a>
-                  <!-- <a class="dropdown-item" href="login.html">Setting</a> -->
-                  <hr class="dropdown-divider" />
-                  <a class="dropdown-item" id="logout" href="/">Logout</a>
+                  <a class="dropdown-item" id="logout" href="/"
+                    >Logout</a
+                  >
                 </div>
               </li>
             </ul>
           </div>
         </nav>
+        
         <main class="content px-3 py-4">
           <div class="container-fluid">
             <div class="mb-3">
-              <h3 class="fw-bold fs-4 mb-3">Nama Santri</h3>
+              <h3 class="fw-bold fs-4 mb-3">Edit Profil</h3>
             </div>
           </div>
           <div class="row">
             <div class="col-xl-12">
               <div class="card mb-4">
-                <div class="card-header">
-                  <span id="bio">Biodata</span>
-                </div>
                 <div class="card-body">
                   <div>
-                    <table class="tabel-bordered tabel tbl-new">
-                      <thead>
-                        <tr>
-                          <th>Nama</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Jenis Kelamin</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Alamat</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Tempat, Tanggal Lahir</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Nama Ayah</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Pekerjaan Ayah</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Nama Ibu</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>NO HP Wali</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Status Santri</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Status Biaya</th>
-                          <td></td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- 
-                          perulangan buat tr
-                       -->
-                      </tbody>
-                    </table>
+                    <form action="#" method="post">
+                        <table class=" tabel-bordered tabel tbl-new">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label for="uname">Username</label>
+                                    </th>
+                                    <th>
+                                        <label for="pw">Password</label>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="uname" id="uname">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="pw" id="pw">
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 
+                                    perulangan buat tr
+                                -->
+                            </tbody>
+                        </table>
+                      <button type="submit" name="submit" class="button mt-5">Simpan</button>
+                    </form>
                   </div>
                   <canvas id="myBarChart" width="100%" height="40"></canvas>
                 </div>
@@ -166,7 +157,11 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="{{url_for('static', filename='script/dashboard.js')}}"></script>
   </body>
 </html>

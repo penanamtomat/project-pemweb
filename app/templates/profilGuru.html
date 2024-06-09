@@ -23,15 +23,15 @@
         </div>
         <ul class="sidebar-nav">
           <li class="sidebar-item">
-            <a href="#bio" class="bru">
-              <i class="bi bi-person-fill"></i>
-              <span>Biodata</span>
+            <a href="/absenGuru" class="sidebar-link">
+              <i class="bi bi-calendar-plus"></i>
+              <span>Absen</span>
             </a>
           </li>
           <li class="sidebar-item">
-            <a href="/biayaSantri" class="sidebar-link">
-              <i class="bi bi-cash"></i>
-              <span>Iuran</span>
+            <a href="#" class="bru">
+              <i class="bi bi-person-fill-check"></i>
+              <span>Santri</span>
             </a>
           </li>
           <!-- <li class="sidebar-item">
@@ -79,66 +79,42 @@
         <main class="content px-3 py-4">
           <div class="container-fluid">
             <div class="mb-3">
-              <h3 class="fw-bold fs-4 mb-3">Nama Santri</h3>
+              <h3 class="fw-bold fs-4 mb-3">Edit Profil</h3>
             </div>
           </div>
           <div class="row">
             <div class="col-xl-12">
               <div class="card mb-4">
-                <div class="card-header">
-                  <span id="bio">Biodata</span>
-                </div>
                 <div class="card-body">
                   <div>
-                    <table class="tabel-bordered tabel tbl-new">
-                      <thead>
-                        <tr>
-                          <th>Nama</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Jenis Kelamin</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Alamat</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Tempat, Tanggal Lahir</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Nama Ayah</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Pekerjaan Ayah</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Nama Ibu</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>NO HP Wali</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Status Santri</th>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <th>Status Biaya</th>
-                          <td></td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- 
-                          perulangan buat tr
-                       -->
-                      </tbody>
-                    </table>
+                    <form action="#" method="post">
+                      <table class="tabel-bordered tabel tbl-new">
+                        <thead>
+                          <tr>
+                            <th>
+                              <label for="uname">Username</label>
+                            </th>
+                            <th>
+                              <label for="pw">Password</label>
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="text" name="uname" id="uname" />
+                            </td>
+                            <td>
+                              <input type="text" name="pw" id="pw" />
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- 
+                                      perulangan buat tr
+                                  -->
+                        </tbody>
+                      </table>
+                      <button type="submit" name="submit" class="button mt-5">Simpan</button>
+                    </form>
                   </div>
                   <canvas id="myBarChart" width="100%" height="40"></canvas>
                 </div>
@@ -155,7 +131,7 @@
         <h5>Apakah Anda Yakin?</h5>
         <div class="divide"></div>
         <div class="bttn-container">
-          <button class="popupx bttn" id="continueToReg">
+          <button class="popupx bttn">
             <a href="/">Ya</a>
           </button>
 
