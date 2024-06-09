@@ -106,21 +106,24 @@
                           <th>Nama</th>
                           <th>Alamat</th>
                           <th>Jadwal</th>
-                          <th>Status</th>
+                          <th>Status Bayar</th>
+                          <th>Lainnya</th>
                         </tr>
                       </thead>
                       <tbody>
+                        {% for p in santri %}
                         <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td scope="row">{{loop.index}}</td>
+                          <td>{{p.nama_santri}}</td>
+                          <td>{{p.alamat_santri}}</td>
+                          <td>{{p.jadwal}}</td>
+                          <td>{{p.status_bayar}}</td>
                           <td>
-                            <a href="/edit" class="details">Edit</a>|
+                            <a href="/{{p.id}}/edit" class="details">Edit</a>|
                             <a href="#" class="details">Hapus</a>
                           </td>
                         </tr>
+                        {% endfor %}
                       <!-- 
                           perulangan buat tr
                        -->
