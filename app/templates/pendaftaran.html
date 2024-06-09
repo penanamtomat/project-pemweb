@@ -57,7 +57,7 @@
 
     <div class="container pad-bot">
       <p><span>*</span> (bintang dengan warna merah) menandakan kolom wajib diisi</p>
-      <form class="row g-3 text-size" action="/pendaftaran/save" method="POST" id="regForm">
+      <form class="row g-3 text-size" action="/pendaftaran/save" method="POST" id="regForm" enctype="multipart/form-data">
         <div class="col-md-6">
           <label for="nama" class="form-label">Nama Santri <span>*</span></label>
           <input type="text" class="form-control" id="nama" name="nama" required />
@@ -173,7 +173,7 @@
     </div>
 
     <!-- POP BERHASIL DAFTAR -->
-    <div class="overlay" id="popup">
+    <!-- <div class="overlay" id="popup">
       <div class="pop">
         <div class="bttn-contain">
           <button class="popx" id="closePopup">
@@ -182,20 +182,20 @@
         </div>
         <p>pendaftaran berhasil</p>
         <div class="divide">
-          <div>
-            <!-- <button class="bttn"> -->
-            <a href="/antrian" class="bttn">antrian</a>
-            <!-- </button> -->
-          </div>
-          <div>
-            <!-- <button class="bttn"> -->
-            <a href="/landingpage" class="bttn">awal</a>
-            <!-- </button> -->
-          </div>
-        </div>
-      </div>
-    </div>
+          <div> -->
+    <!-- <button class="bttn"> -->
+    <!-- <a href="/antrian" class="bttn">antrian</a> -->
+    <!-- </button> -->
+    <!-- </div> -->
+    <!-- <div> -->
+    <!-- <button class="bttn"> -->
+    <!-- <a href="/landingpage" class="bttn">awal</a> -->
+    <!-- </button> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div>/ -->
+    <!-- </div> -->
 
-    <script src="{{url_for('static', filename='script/script.js')}}"></script>
+    <!-- <script src="{{url_for('static', filename='script/script.js')}}"></script> -->
   </body>
 </html>
