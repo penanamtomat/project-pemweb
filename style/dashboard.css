@@ -386,3 +386,20 @@ tr, td{
   padding: 3px 6px;
   border-radius: 5px;
 }
+
+.tengah {
+  display: flex;
+  justify-content: center;
+}
+
+.data-guru {
+  display: flex;
+  justify-content: end;
+}
+
+.data {
+  background-color: #228b22;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 5px;
+}

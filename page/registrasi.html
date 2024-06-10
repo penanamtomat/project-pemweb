@@ -31,13 +31,13 @@
         </div>
         <ul class="sidebar-nav">
           <li class="sidebar-item">
-            <a href="dashboard.html" class="sidebar-link">
+            <a href="#" class="bru">
               <i class="bi bi-house-door-fill"></i>
               <span>Home</span>
             </a>
           </li>
           <li class="sidebar-item">
-            <a href="#" class="bru">
+            <a href="showGuru.html" class="sidebar-link">
               <i class="bi bi-person-video"></i>
               <span>Guru</span>
             </a>
@@ -83,56 +83,57 @@
             </div>
           </div>
         </nav>
-        <main class="content px-3 py-4">
-          <div class="container-fluid">
-            <div class="mb-3">
-              <h3 class="fw-bold fs-4 mb-3">Data Guru</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="card mb-4">
-                <div class="card-header">
-                  <i class="bi bi-bar-chart-line"></i>
-                  <span>Data Guru</span>
-                </div>
-                <div class="card-body">
-                  <div>
-                    <table class="table table-bordered text-center tabel">
-                      <thead>
-                        <tr>
-                          <th class="fixed">No</th>
-                          <th>Nama</th>
-                          <th>Alamat</th>
-                          <th>Jadwal</th>
-                          <th>Lainnya</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <a href="editguru.html" class="details">Edit</a>|
-                            <a href="#" class="details">Hapus</a>
-                          </td>
-                        </tr>
-                      <!-- 
-                          perulangan buat tr
-                       -->
-                      </tbody>
-                    </table>
-                    <div class="data-guru">
-                      <a href="tambahGuru.html" class="data">Tambah Data</a>
+        <main class="content px-3 py-4 mx-auto">
+            <div class="row">
+                <div class="col-xl-12">
+                  <div class="card mb-4">
+                    <div class="card-header">
+                      <i class="bi bi-bar-chart-line"></i>
+                      <span>Tambah Username</span>
+                    </div>
+                    <div class="card-body new">
+                      <div>
+                        <form action="#" method="post">
+                          <table>
+                            <thead class="listdata">
+                                <th>
+                                  <label for="uname">Username</label>
+                                </th>
+                                <td>
+                                  <input type="text" name="uname" id="uname">
+                                </td>
+                              </tr>
+                                <th>
+                                  <label for="pw">Password</label>
+                                </th>
+                                <td>
+                                  <input type="password" name="pw" id="pw" style="margin: 5px 0px;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <th style="padding-right: 4px;">
+                                  <label for="peran">Daftar sebagai</label>
+                                </th>
+                                <td>
+                                  <select name="peran" id="peran" style="margin: 5px 0px;">
+                                    <option value="">pilih</option>
+                                    <option value="santri">santri</option>
+                                    <option value="guru">guru</option>
+                                  </select>
+                                </td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
+                          <button type="submit" name="tambah" class="button mt-5">Tambah</button>
+                        </form>
+                      </div>
+                      <canvas id="myBarChart" width="100%" height="40"></canvas>
                     </div>
                   </div>
-                  <canvas id="myBarChart" width="100%" height="40"></canvas>
                 </div>
               </div>
-            </div>
-          </div>
         </main>
       </div>
     </div>

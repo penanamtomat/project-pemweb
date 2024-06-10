@@ -20,42 +20,42 @@
   </head>
   <body>
     <div class="wrapper">
-      <aside id="sidebar">
-        <div class="d-flex">
-          <button id="toggle-btn" type="button">
-            <i class="bi bi-list"></i>
-          </button>
-          <div class="sidebar-logo">
-            <!-- <a href="#">Admin Dashboard</a> -->
-          </div>
-        </div>
-        <ul class="sidebar-nav">
-          <li class="sidebar-item">
-            <a href="dashboard.html" class="sidebar-link">
-              <i class="bi bi-house-door-fill"></i>
-              <span>Home</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a href="showGuru.html" class="sidebar-link">
-              <i class="bi bi-person-video"></i>
-              <span>Guru</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a href="#" class="bru">
-              <i class="bi bi-person-fill-check"></i>
-              <span>Santri</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a href="update.html" class="sidebar-link">
-              <i class="bi bi-journal-arrow-up"></i>
-              <span>Update</span>
-            </a>
-          </li>
-        </ul>
-      </aside>
+        <aside id="sidebar">
+            <div class="d-flex">
+              <button id="toggle-btn" type="button">
+                <i class="bi bi-list"></i>
+              </button>
+              <div class="sidebar-logo">
+                <!-- <a href="#">Admin Dashboard</a> -->
+              </div>
+            </div>
+            <ul class="sidebar-nav">
+              <li class="sidebar-item">
+                <a href="dashboard.html" class="sidebar-link">
+                  <i class="bi bi-house-door-fill"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="bru">
+                  <i class="bi bi-person-video"></i>
+                  <span>Guru</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="showSantri.html" class="sidebar-link">
+                  <i class="bi bi-person-fill-check"></i>
+                  <span>Santri</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="update.html" class="sidebar-link">
+                  <i class="bi bi-journal-arrow-up"></i>
+                  <span>Update</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
 
       <div class="main">
         <nav class="navbar navbar-expand px-4 py-3">
@@ -83,11 +83,10 @@
             </div>
           </div>
         </nav>
-        
         <main class="content px-3 py-4">
           <div class="container-fluid">
             <div class="mb-3">
-              <h3 class="fw-bold fs-4 mb-3">Edit Data Santri</h3>
+              <h3 class="fw-bold fs-4 mb-3">Tambah Data Guru</h3>
             </div>
           </div>
           
@@ -96,7 +95,7 @@
               <div class="card mb-4">
                 <div class="card-header">
                   <i class="bi bi-bar-chart-line"></i>
-                  <span>Edit Data Santri</span>
+                  <span>Tambah Data Guru</span>
                 </div>
                 <div class="card-body new">
                   <div>
@@ -105,18 +104,25 @@
                         <thead class="listdata">
                           <tr>
                             <th>
-                              <label for="nama"> Nama</label>
+                              <label for="nik">NIK</label>
+                            </th>
+                            <td>
+                              <input type="text" name="nik" id="nik" style="margin: 5px 0px;">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>
+                              <label for="nama">Nama</label>
                             </th>
                             <td>
                               <input type="text" name="nama" id="nama">
                             </td>
                           </tr>
-                          <tr>
                             <th>
-                              <label for="ttl">Tempat lahir</label>
+                              <label for="Tl">Tempat lahir</label>
                             </th>
                             <td>
-                              <input type="text" name="ttl" id="ttl" style="margin: 5px 0px;">
+                              <input type="text" name="Tl" id="Tl" style="margin: 5px 0px;">
                             </td>
                           </tr>
                           <tr>
@@ -125,38 +131,6 @@
                             </th>
                             <td>
                               <input type="date" name="tgl" id="tgl">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="dadname">Nama Ayah</label>
-                            </th>
-                            <td>
-                              <input type="text" name="dadname" id="dadname" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th style="padding-right: 4px;">
-                              <label for="dadkerja">Pekerjaan Ayah</label>
-                            </th>
-                            <td>
-                              <input type="text" name="dadkerja" id="dadkerja">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="momname">Nama Ibu</label>
-                            </th>
-                            <td>
-                              <input type="text" name="momname" id="momname" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="momwork">Pekerjaan Ibu</label>
-                            </th>
-                            <td>
-                              <input type="text" name="momwork" id="momwork">
                             </td>
                           </tr>
                           <tr>
@@ -181,57 +155,17 @@
                           </tr>
                           <tr>
                             <th>
-                              <label for="jadwal">Jadwal</label>
-                            </th>
-                            <td>
-                              <input type="text" name="jadwal" id="jadwal">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
                               <label for="nohp">No HP</label>
                             </th>
                             <td>
-                              <input type="text" name="nohp" id="nohp" style="margin: 5px 0px;">
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="tahunan">Biaya tahunan</label>
-                            </th>
-                            <td>
-                              <select type="text" name="tahunan" id="tahunan">
-                                <option selected value="">pilih</option>
-                                <option value="75000">Rp. 75.000</option>
-                                <option value="100000">Rp. 100.000</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="spp">Biaya SPP</label>
-                            </th>
-                            <td>
-                              <select type="text" name="spp" id="spp" style="margin: 5px 0px;">
-                                <option selected value="">pilih</option>
-                                <option value="30000">Rp. 30.000</option>
-                                <option value="50000">Rp. 50.000</option>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>
-                              <label for="statusBayar">Status bayar</label>
-                            </th>
-                            <td>
-                              <input type="text" name="statusBayar" id="statusBayar">
+                              <input type="text" name="nohp" id="nohp">
                             </td>
                           </tr>
                         </thead>
                         <tbody>
                         </tbody>
                       </table>
-                      <button type="submit" name="submit" class="button mt-5">Simpan</button>
+                      <button type="submit" name="tambah" class="button mt-5">Tambah</button>
                     </form>
                   </div>
                   <canvas id="myBarChart" width="100%" height="40"></canvas>
